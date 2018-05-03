@@ -29,8 +29,8 @@
 |------|----|-------|
 |text|text|
 |image|text|
-|user_id|reference|null: false, foreign_key: true|
-|group_id|reference|null: false, foreign_key: true|
+|user|reference|null: false, foreign_key: true|
+|group|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
