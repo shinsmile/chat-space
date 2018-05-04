@@ -1,3 +1,55 @@
-// Place all the styles related to the messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.left_contents {
+  float: left;
+  width: 300px;
+  }
+
+.left_contents .left_header {
+  height: 100px;
+  background-color: #253141;
+  padding: 0 20px
+}
+
+.left_contents .left_header h3{
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  vertical-align:middle;
+  line-height: 100px;
+}
+
+
+.left_contents .left_bottom_contents {
+  height: calc(100vh - 100px);
+  background-color: #2f3e51;
+}
+
+.right_contents {
+  position: absolute;
+  top: 0px;
+  left: 300px;
+  width: calc(100% - 300px);
+  min-width: 300px;
+}
+
+.right_contents .right_header {
+  height: 100px;
+  background-color: white;
+  }
+
+.right_contents .group_messages {
+  background-color: #AAAAAA;
+  height: calc(100vh - 100px - 90px);
+  }
+
+.right_contents .form {
+  height: 90px;
+  box-sizing: border-box;
+  background-color: #DDDDDD;
+  padding: 20px 50px 20px 40px;
+}
+
+
+
+
