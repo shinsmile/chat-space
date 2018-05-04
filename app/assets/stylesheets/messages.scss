@@ -45,9 +45,23 @@
   transform: translateY(-50%);
 }
 
-.left_contents .left_bottom_contents {
+.left_contents .groups {
   height: calc(100vh - 100px);
   background-color: #2f3e51;
+  padding: 0 20px;
+}
+
+.left_contents .groups ul li .group__name{
+  padding-top: 20px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  color: white;
+}
+
+.left_contents .groups ul li .group__message{
+  padding-bottom: 20px;
+  font-size: 11px;
+  color: white;
 }
 
 .right_contents {
