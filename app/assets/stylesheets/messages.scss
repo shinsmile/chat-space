@@ -1,4 +1,5 @@
 
+$mainBlueColor: #38AEF0;
 
 .left_contents {
   float: left;
@@ -101,15 +102,17 @@
       color: #999999;
     }
 
-    input[type="submit"] {
+    .Edit {
       float:right;
       margin-top: 28px;
       padding-left: 20px;
       padding-right: 20px;
-      height: 40px;
-      background-color: white;
-      color: #38AEF0;
-      border-color: #38AEF0;
+      padding-top: 7px;
+      height: 30px;
+      border: 1px solid;
+      text-decoration: none;
+      color: $mainBlueColor;
+      border-color: $mainBlueColor;
     }
   }
 
@@ -178,7 +181,7 @@
       float:right;
       height: 50px;
       width: 100px;
-      background-color: #38AEF0;
+      background-color: $mainBlueColor;
       color: white;
     }
   }
