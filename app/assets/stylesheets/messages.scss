@@ -24,22 +24,34 @@
 .left_contents .left_header .header__lists {
   float: right;
   height: 100px;
-  width: 35px;
+  width: 38px;
 }
 
 .left_contents .left_header .header__lists ul .memo{
   float: left;
+  width: 16px;
   height: 100px;
+}
+
+.left_contents .left_header .header__lists ul .memo .fas.fa-edit{
+  color: white;
+  position: relative;
+  top: 46%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .left_contents .left_header .header__lists ul .setting{
   float: right;
+  width: 16px;
   height: 100px;
 }
 
-.left_contents .left_header .header__lists ul li img{
+.left_contents .left_header .header__lists ul .setting .fas.fa-cog{
+  color: white;
   position: relative;
-  top: 50%;
+  top: 46%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -84,17 +96,30 @@
 .right_contents .right_header h3{
   padding-top: 35px;
   font-size: 20px;
+  width: 500px;
   color: #333333;
 }
 
 .right_contents .right_header p{
   padding-top: 15px;
   font-size: 12px;
+  width: 500px;
   color: #999999;
 }
 
+.right_contents .right_header input[type="submit"] {
+  float:right;
+  margin-top: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 40px;
+  background-color: white;
+  color: #38AEF0;
+  border-color: #38AEF0;
+}
+
 .right_contents .messages {
-  background-color: #AAAAAA;
+  background-color: #FAFAFA;
   height: calc(100vh - 100px - 90px);
   padding: 6px 40px 0 40px;
 }
@@ -130,15 +155,41 @@
   height: 90px;
   box-sizing: border-box;
   background-color: #DDDDDD;
-  padding: 20px 50px 20px 40px;
+  padding: 20px 40px;
+}
+
+.form input {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 50px;
+  border: 0px;
+  width: calc(100% - 167px);
 }
 
 
+.form .upload__images {
+  float:left;
+  height: 50px;
+  width: 32px;
+  background-color: white;
+}
 
+.form .upload__images .fas.fa-image {
+  position: relative;
+  top: 46%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
-
-
-
+.form input[type="submit"] {
+  float:right;
+  height: 50px;
+  width: 100px;
+  background-color: #38AEF0;
+  color: white;
+}
 
 
 

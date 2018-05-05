@@ -6,9 +6,10 @@
     %div.header__lists
       %ul
         %li.memo
-          = image_tag "メモ.png", size: "16x16", alt: "メモ"
+          %i.fas.fa-edit
         %li.setting
-          = image_tag "設定.png", size: "16x16", alt: "設定"
+          %i.fas.fa-cog
+
   %div.groups
     %ul
       %li
@@ -23,6 +24,7 @@
 
 %div.right_contents
   %div.right_header
+    %input{:type => "submit", :value => "edit"}
     %h3.header__name Sampleグループ
     %p.header__member Member: ryosukemaehira
   %div.messages
@@ -46,4 +48,13 @@
       %li.message_text お腹すいた
 
   %div.form
+    %input{:name => "title", :size => "40", :value => "type a message"}
+    %div.upload__images
+      %i.fas.fa-image
+    %input{:type => "submit", :value => "send"}
+
+
+
+
+
 
