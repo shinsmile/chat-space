@@ -22,9 +22,10 @@
         %p.group__name sampleグループ
         %p.group__message まだメッセージはありません。
 
-%div.right_contents
+.right_contents
   %div.right_header
-    %input{:type => "submit", :value => "edit"}
+    = link_to("Edit", '#', class: "Edit")
+
     %h3.header__name Sampleグループ
     %p.header__member Member: ryosukemaehira
   %div.messages
