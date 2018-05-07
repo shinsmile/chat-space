@@ -13,9 +13,7 @@
             %i.fas.fa-cog
 
   .leftContents__groups
-    = render partial: "groups", locals: { groupName: "神" , groupMessage: "まだメッセージはありません。" }
-    = render partial: "groups", locals: { groupName: "aaaaaaaa" , groupMessage: "まだメッセージはありません。" }
-    = render partial: "groups", locals: { groupName: "sampleグループ" , groupMessage: "まだメッセージはありません。" }
+    = render partial: "groups"
 
 .rightContents
   .rightContents__rightHeader
@@ -24,9 +22,7 @@
     %h3.headerName Sampleグループ
     %p.headerMember Member: ryosukemaehira
   .rightContents__messages
-    = render partial: "comments", locals: { messageName: "ryosukemaehira" , messageDate: "2016/10/12 06:27:07", messageText: "なるほど" }
-    = render partial: "comments", locals: { messageName: "ryosukemaehira" , messageDate: "2016/10/12 06:27:25", messageText: "command Enterで送信したい感ある" }
-    = render partial: "comments", locals: { messageName: "ryosukemaehira" , messageDate: "2016/10/12 06:27:30", messageText: "お腹すいた" }
+    = render partial: "messages"
   .rightContents__form
     %input{:name => "title", :size => "40", :value => "type a message"}
     .rightContents__form--uploadImages
