@@ -24,11 +24,11 @@
   .rightContents__messages
     = render partial: "messages"
   .rightContents__form
-    %input{:name => "title", :size => "40", :value => "type a message"}
+    %input{name: "title", size: "40", value: "type a message"}
     .rightContents__form--uploadImages
       =link_to root_path do
         %i.fas.fa-image
-    %input{:type => "submit", :value => "send"}
+    %input{type: "submit", value: "send"}
 
 
 
