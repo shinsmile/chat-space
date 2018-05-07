@@ -1,61 +1,38 @@
 
 
-%div.left_contents
-  %div.left_header
-    %h3.header__name ryosukemaehira
-    %div.header__lists
+.leftContents
+  .leftContents__leftHeader
+    %h3 ryosukemaehira
+    .leftContents__leftHeader--headerLists
       %ul
         %li.memo
-          %i.fas.fa-edit
+          =link_to root_path do
+            %i.fas.fa-edit
         %li.setting
-          %i.fas.fa-cog
+          =link_to root_path do
+            %i.fas.fa-cog
 
-  %div.groups
-    %ul
-      %li
-        %p.group__name 神
-        %p.group__message まだメッセージはありません。
-      %li
-        %p.group__name aaaaaaaa
-        %p.group__message まだメッセージはありません。
-      %li
-        %p.group__name sampleグループ
-        %p.group__message まだメッセージはありません。
+  .leftContents__groups
+    = render partial: "groups", locals: { groupName: "神" , groupMessage: "まだメッセージはありません。" }
+    = render partial: "groups", locals: { groupName: "aaaaaaaa" , groupMessage: "まだメッセージはありません。" }
+    = render partial: "groups", locals: { groupName: "sampleグループ" , groupMessage: "まだメッセージはありません。" }
 
-.right_contents
-  %div.right_header
+.rightContents
+  .rightContents__rightHeader
     = link_to("Edit", '#', class: "Edit")
 
-    %h3.header__name Sampleグループ
-    %p.header__member Member: ryosukemaehira
-  %div.messages
-    %ul
-      %li.message_name_and_date
-        %ul
-          %li.message_name ryosukemaehira
-          %li.message_date 2016/10/12 06:27:07
-      %li.message_text なるほど
-    %ul
-      %li.message_name_and_date
-        %ul
-          %li.message_name ryosukemaehira
-          %li.message_date 2016/10/12 06:27:25
-      %li.message_text command Enterで送信したい感ある
-    %ul
-      %li.message_name_and_date
-        %ul
-          %li.message_name ryosukemaehira
-          %li.message_date 2016/10/12 06:27:30
-      %li.message_text お腹すいた
-
-  %div.form
+    %h3.headerName Sampleグループ
+    %p.headerMember Member: ryosukemaehira
+  .rightContents__messages
+    = render partial: "comments", locals: { messageName: "ryosukemaehira" , messageDate: "2016/10/12 06:27:07", messageText: "なるほど" }
+    = render partial: "comments", locals: { messageName: "ryosukemaehira" , messageDate: "2016/10/12 06:27:25", messageText: "command Enterで送信したい感ある" }
+    = render partial: "comments", locals: { messageName: "ryosukemaehira" , messageDate: "2016/10/12 06:27:30", messageText: "お腹すいた" }
+  .rightContents__form
     %input{:name => "title", :size => "40", :value => "type a message"}
-    %div.upload__images
-      %i.fas.fa-image
+    .rightContents__form--uploadImages
+      =link_to root_path do
+        %i.fas.fa-image
     %input{:type => "submit", :value => "send"}
-
-
-
 
 
 

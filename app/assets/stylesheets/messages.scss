@@ -1,11 +1,11 @@
 
 $mainBlueColor: #38AEF0;
 
-.left_contents {
+.leftContents {
   float: left;
   width: 300px;
 
-  .left_header {
+  &__leftHeader {
     height: 100px;
     background-color: #253141;
     padding: 0 20px;
@@ -20,7 +20,7 @@ $mainBlueColor: #38AEF0;
       float: left;
     }
 
-    .header__lists {
+    &--headerLists {
        float: right;
        height: 100px;
        width: 38px;
@@ -33,10 +33,7 @@ $mainBlueColor: #38AEF0;
         .fas.fa-edit{
           color: white;
           position: relative;
-          top: 46%;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+          top: 38%;
         }
       }
 
@@ -48,27 +45,24 @@ $mainBlueColor: #38AEF0;
         .fas.fa-cog{
           color: white;
           position: relative;
-          top: 46%;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+          top: 38%;
         }
       }
     }
   }
 
-  .groups {
+  &__groups {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 0 20px;
-    ul li .group__name{
+    .groupName{
       padding-top: 20px;
       padding-bottom: 5px;
       font-size: 15px;
       color: white;
     }
 
-    ul li .group__message{
+    .groupMessage{
       padding-bottom: 20px;
       font-size: 11px;
       color: white;
@@ -76,14 +70,14 @@ $mainBlueColor: #38AEF0;
   }
 }
 
-.right_contents {
+.rightContents {
   position: absolute;
   top: 0px;
   left: 300px;
   width: calc(100% - 300px);
   min-width: 300px;
 
-  .right_header {
+  &__rightHeader {
   height: 100px;
   background-color: white;
   padding: 0 40px;
@@ -116,22 +110,22 @@ $mainBlueColor: #38AEF0;
     }
   }
 
-  .messages {
+  &__messages {
     background-color: #FAFAFA;
     height: calc(100vh - 100px - 90px);
     padding: 6px 40px 0 40px;
 
-    .message_name_and_date {
+    &--messageNameAndDate {
       padding-top: 40px;
       padding-bottom: 10px;
 
-      ul .message_name {
+      ul .messageName {
         float: left;
         font-size: 16px;
         color: #434A54;
         padding-right: 10px;
       }
-      ul .message_date {
+      ul .messageDate {
         float: left;
         font-size: 12px;
         line-height: 24px;
@@ -139,7 +133,7 @@ $mainBlueColor: #38AEF0;
         color: #999999;
       }
     }
-    .message_text {
+    &--messageText {
       padding-top: 10px;
       font-size: 14px;
       color: #434A54;
@@ -147,7 +141,7 @@ $mainBlueColor: #38AEF0;
     }
   }
 
-  .form {
+  &__form {
     height: 90px;
     box-sizing: border-box;
     background-color: #DDDDDD;
@@ -162,7 +156,7 @@ $mainBlueColor: #38AEF0;
       width: calc(100% - 167px);
     }
 
-    .upload__images {
+    &--uploadImages {
       float:left;
       height: 50px;
       width: 32px;
@@ -170,10 +164,7 @@ $mainBlueColor: #38AEF0;
 
       .fas.fa-image {
         position: relative;
-        top: 46%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+        top: 28%;
       }
     }
 
