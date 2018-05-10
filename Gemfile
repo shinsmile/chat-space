@@ -41,6 +41,8 @@ gem 'erb2haml'
 gem 'font-awesome-rails'
 gem 'font-awesome-sass', '~> 5.0.6'
 gem 'devise'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
