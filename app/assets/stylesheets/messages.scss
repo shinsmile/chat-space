@@ -53,24 +53,25 @@
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 0 20px;
-    .groupName{
+    .group__name{
       padding-top: 20px;
       padding-bottom: 5px;
       font-size: 15px;
       color: white;
+      text-decoration: none;
     }
 
-    .groupMessage{
+    .group__message{
       padding-bottom: 20px;
       font-size: 11px;
       color: white;
+      text-decoration: none;
     }
   }
 }
 
 .rightContents {
   position: absolute;
-  top: 0px;
   left: 300px;
   width: calc(100% - 300px);
   min-width: 300px;
@@ -175,3 +176,4 @@
     }
   }
 }
+
