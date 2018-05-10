@@ -109,22 +109,23 @@
     }
   }
 
-  &__messages {
+  .messages {
     background-color: #FAFAFA;
     height: calc(100vh - 100px - 90px);
     padding: 6px 40px 0 40px;
 
-    &--messageNameAndDate {
+    .upper-message {
       padding-top: 40px;
       padding-bottom: 10px;
 
-      ul .messageName {
+      .upper-message__user-name {
         float: left;
         font-size: 16px;
         color: #434A54;
         padding-right: 10px;
+        font-weight: bold;
       }
-      ul .messageDate {
+      .upper-message__date {
         float: left;
         font-size: 12px;
         line-height: 24px;
@@ -132,7 +133,7 @@
         color: #999999;
       }
     }
-    &--messageText {
+    .lower-meesage {
       padding-top: 10px;
       font-size: 14px;
       color: #434A54;
@@ -155,15 +156,19 @@
       width: calc(100% - 167px);
     }
 
-    &--uploadImages {
+    &--mask {
       float:left;
       height: 50px;
       width: 32px;
       background-color: white;
 
-      .fas.fa-image {
+      .icon {
         position: relative;
         top: 28%;
+      }
+
+      .hidden {
+        visibility: hidden;
       }
     }
 

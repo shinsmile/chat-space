@@ -1,15 +1,11 @@
-.rightContents__messages--messageNameAndDate
-  %ul
-    %li.messageName ryosukemaehira
-    %li.messageDate 2016/10/12 06:27:07
-.rightContents__messages--messageText なるほど
-.rightContents__messages--messageNameAndDate
-  %ul
-    %li.messageName ryosukemaehira
-    %li.messageDate 2016/10/12 06:27:25
-.rightContents__messages--messageText command Enterで送信したい感ある
-.rightContents__messages--messageNameAndDate
-  %ul
-    %li.messageName ryosukemaehira
-    %li.messageDate 2016/10/12 06:27:30
-.rightContents__messages--messageText お腹すいた
+.message
+  .upper-message
+    .upper-message__user-name
+      = message.user.name
+    .upper-message__date
+      = message.created_at
+  .lower-meesage
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

@@ -20,11 +20,14 @@
 
     %h3.headerName Sampleグループ
     %p.headerMember Member: ryosukemaehira
-  .rightContents__messages
-    = render partial: "message"
+  .messages
+    = render partial: 'message', collection: @messages
+
   .rightContents__form
-    %input{name: "title", size: "40", value: "type a message"}
-    .rightContents__form--uploadImages
-      =link_to root_path do
-        %i.fas.fa-image
-    %input{type: "submit", value: "send"}
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'message', placeholder: 'type a message'
+      .rightContents__form--mask
+        = f.label :image, class: 'form__mask__image' do
+          = fa_icon 'image', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
