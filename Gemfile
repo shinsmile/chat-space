@@ -47,6 +47,10 @@ gem 'mini_magick'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'factory_girl_rails', "~> 4.4.1"
+  gem 'faker'
 end
 
 group :development do
