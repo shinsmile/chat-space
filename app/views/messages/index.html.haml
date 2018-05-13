@@ -16,10 +16,12 @@
 
 .rightContents
   .rightContents__rightHeader
-    = link_to("Edit", '#', class: "Edit")
+    = link_to("Edit", 'edit', class: "Edit")
 
-    %h3.headerName Sampleグループ
-    %p.headerMember Member: ryosukemaehira
+    %h3.headerName
+      = @group.name
+    %p.headerMember
+      = @group.users.name
   .messages
     = render partial: 'message', collection: @messages
 
