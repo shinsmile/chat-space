@@ -1,0 +1,33 @@
+.leftContents
+  .leftContents__leftHeader
+    %h3
+      = current_user.name
+    .leftContents__leftHeader--headerLists
+      %ul
+        %li.memo
+          = link_to new_group_path do
+            %i.fas.fa-edit
+        %li.setting
+          =link_to edit_user_path(current_user) do
+            %i.fas.fa-cog
+
+  .leftContents__groups
+    = render partial: "group"
+
+.rightContents
+  .rightContents__rightHeader
+    = link_to("Edit", '#', class: "Edit")
+
+    %h3.headerName Sampleグループ
+    %p.headerMember Member: ryosukemaehira
+  .messages
+    = render partial: 'message', collection: @messages
+
+  .rightContents__form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'message', placeholder: 'type a message'
+      .rightContents__form--mask
+        = f.label :image, class: 'form__mask__image' do
+          = fa_icon 'image', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'

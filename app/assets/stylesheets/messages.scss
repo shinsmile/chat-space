@@ -1,0 +1,184 @@
+
+.leftContents {
+  float: left;
+  width: 300px;
+
+  &__leftHeader {
+    height: 100px;
+    background-color: #253141;
+    padding: 0 20px;
+
+    h3 {
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      vertical-align:middle;
+      line-height: 100px;
+      width: 200px;
+      float: left;
+    }
+
+    &--headerLists {
+       float: right;
+       height: 100px;
+       width: 38px;
+
+      ul .memo{
+        float: left;
+        width: 16px;
+        height: 100px;
+
+        .fas.fa-edit{
+          color: white;
+          position: relative;
+          top: 38%;
+        }
+      }
+
+      ul .setting{
+       float: right;
+       width: 16px;
+       height: 100px;
+
+        .fas.fa-cog{
+          color: white;
+          position: relative;
+          top: 38%;
+        }
+      }
+    }
+  }
+
+  &__groups {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 0 20px;
+    .group__name{
+      padding-top: 20px;
+      padding-bottom: 5px;
+      font-size: 15px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .group__message{
+      padding-bottom: 20px;
+      font-size: 11px;
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.rightContents {
+  position: absolute;
+  left: 300px;
+  width: calc(100% - 300px);
+  min-width: 300px;
+
+  &__rightHeader {
+  height: 100px;
+  background-color: white;
+  padding: 0 40px;
+
+    h3{
+      padding-top: 35px;
+      font-size: 20px;
+      width: 500px;
+      color: #333333;
+    }
+
+    p{
+      padding-top: 15px;
+      font-size: 12px;
+      width: 500px;
+      color: #999999;
+    }
+
+    .Edit {
+      float:right;
+      margin-top: 28px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      height: 30px;
+      border: 1px solid;
+      text-decoration: none;
+      color: $mainBlueColor;
+      border-color: $mainBlueColor;
+    }
+  }
+
+  .messages {
+    background-color: #FAFAFA;
+    height: calc(100vh - 100px - 90px);
+    padding: 6px 40px 0 40px;
+
+    .upper-message {
+      padding-top: 40px;
+      padding-bottom: 10px;
+
+      .upper-message__user-name {
+        float: left;
+        font-size: 16px;
+        color: #434A54;
+        padding-right: 10px;
+        font-weight: bold;
+      }
+      .upper-message__date {
+        float: left;
+        font-size: 12px;
+        line-height: 24px;
+        vertical-align: middle;
+        color: #999999;
+      }
+    }
+    .lower-meesage {
+      padding-top: 10px;
+      font-size: 14px;
+      color: #434A54;
+      clear: both;
+    }
+  }
+
+  &__form {
+    height: 90px;
+    box-sizing: border-box;
+    background-color: #DDDDDD;
+    padding: 20px 40px;
+
+    input {
+      float: left;
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 50px;
+      border: 0px;
+      width: calc(100% - 167px);
+    }
+
+    &--mask {
+      float:left;
+      height: 50px;
+      width: 32px;
+      background-color: white;
+
+      .icon {
+        position: relative;
+        top: 28%;
+      }
+
+      .hidden {
+        visibility: hidden;
+      }
+    }
+
+    input[type="submit"] {
+      float:right;
+      height: 50px;
+      width: 100px;
+      background-color: $mainBlueColor;
+      color: white;
+    }
+  }
+}
+
