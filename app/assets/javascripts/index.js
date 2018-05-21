@@ -11,7 +11,7 @@ function appendUser(user) {
   user_list.append(html);
 }
 
-var member_list = $("#member-added")
+var member_list = $("#chat-group-users")
 
 function addUserToGroup(userID, userName) {
   var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
@@ -50,11 +50,11 @@ function addUserToGroup(userID, userName) {
     var userID = $(this).data('user-id');
     var userName = $(this).data('user-name');
     var html = addUserToGroup(userID, userName);
-    $("#member-added").append(html);
+    $("#chat-group-users").append(html);
     $(this).parent().remove();
   })
 
-  $('#member-added').on('click', '.user-search-remove', function(){
+  $('#chat-group-users').on('click', '.user-search-remove', function(){
     $(this).parent().remove();
   })
 });
