@@ -25,22 +25,25 @@ function addUserToGroup(userID, userName) {
   $("#user-search-field").on("keyup", function(e) {
     e.preventDefault();
     var input = $("#user-search-field").val();
-
-    $.ajax({
-      type: 'GET',
-      url: '/users',
-      data: { keyword: input },
-      dataType: 'json'
-    })
-    .done(function(users) {
-      $("#user-search-result").empty();
-      users.forEach(function(user){
-        appendUser(user);
-      });
-    })
-    .fail(function(){
-      alert('error');
-    })
+    if (input.length !== 0) {
+      $.ajax({
+        type: 'GET',
+        url: '/users',
+        data: { keyword: input },
+        dataType: 'json'
+      })
+      .done(function(users) {
+        $("#user-search-result").empty();
+        if (users.length !== 0) {
+          users.forEach(function(user){
+            appendUser(user);
+          });
+        }
+      })
+      .fail(function(){
+        alert('error');
+      })
+    }
   });
 
   $('#user-search-result').on('click', '.user-search-add', function(){
@@ -55,6 +58,3 @@ function addUserToGroup(userID, userName) {
     $(this).parent().remove();
   })
 });
-
-
-
