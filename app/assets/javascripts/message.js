@@ -1,4 +1,3 @@
-
 $(function() {
 
 var message_list = $(".messages");
