@@ -1,19 +1,19 @@
 $(function() {
 
-var message_list = $(".messages");
+  var message_list = $(".messages");
 
-function setMessage(message) {
-  var html = `<div class="message jsMessage" data-id="${message.id}" >
-                <div class="upper-message">
-                  <div class="upper-message__user-name">${ message.name }</div>
-                  <div class="upper-message__date">
-                    ${ message.created_at }</div>
-                </div>
-                <div class="lower-meesage">
-                  <p class="lower-message__content">${ message.content }</p>
-                </div>
-              </div>`
-  message_list.append(html);
+  function setMessage(message) {
+    var html = `<div class="message jsMessage" data-id="${message.id}" >
+                  <div class="upper-message">
+                    <div class="upper-message__user-name">${ message.name }</div>
+                    <div class="upper-message__date">
+                      ${ message.created_at }</div>
+                  </div>
+                  <div class="lower-meesage">
+                    <p class="lower-message__content">${ message.content }</p>
+                  </div>
+                </div>`
+    message_list.append(html);
 }
 
 function showMessage(){
