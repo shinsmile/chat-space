@@ -17,7 +17,7 @@ function setMessage(message) {
   message_list.append(html);
 }
 
-function hoge(){
+function showMessage(){
   var message_id = $('.jsMessage:last').data('id');
   $.ajax({
       url: location.href,
@@ -31,8 +31,11 @@ function hoge(){
       setMessage(message);
     });
   })
+  .fail(function(){
+    alert('error');
+  })
 }
 
-setInterval(hoge, 3000)
+setInterval(showMessage, 3000)
 
 });
