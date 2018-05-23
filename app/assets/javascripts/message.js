@@ -13,7 +13,7 @@ $(function() {
                     <p class="lower-message__content">${ message.content }</p>
                   </div>
                 </div>`
-    message_list.append(html);
+    message_list.update(html);
 }
 
 function showMessage(){
