@@ -26,7 +26,6 @@ function showMessage(){
       dataType: 'json'
   })
   .done(function(messages) {
-    var id = $('.message').data('messageId');
     messages.forEach(function(message){
       setMessage(message);
     });
