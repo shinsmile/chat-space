@@ -43,8 +43,8 @@ gem 'font-awesome-sass', '~> 5.0.6'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'fog-aws'
-gem 'fog', '~> 1.38'
+gem 'fog'
+gem 'unf_ext', '~> 0.0.7.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -66,7 +66,6 @@ group :development do
   gem 'pry-doc'    # methodを表示
   gem 'pry-byebug' # デバッグを実施(Ruby 2.0以降で動作する)
   gem 'pry-stack_explorer'
-
 end
 
 group :production do
