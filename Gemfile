@@ -43,6 +43,7 @@ gem 'font-awesome-sass', '~> 5.0.6'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog-aws'
 gem 'fog'
 
 group :development, :test do
